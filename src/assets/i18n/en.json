@@ -1,0 +1,19 @@
+{
+  "HOME": {
+    "Header1": "Phonebook",
+    "Header2": "List of users"
+  },
+  "Table": {
+    "Column1": "FirstName",
+    "Column2": "LastName",
+    "Column3": "Phone",
+    "Column4": "Comment"
+  },
+  "Modal": {
+    "Header1": "Modal window: Create",
+    "Header2": "Modal window: Edit",
+    "Button1": "Add",
+    "Button2": "Update",
+    "Button3": "Close"
+  }
+}
