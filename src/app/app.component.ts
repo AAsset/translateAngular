@@ -64,7 +64,7 @@ export class AppComponent {
     }
     updateUser(){
         let user = this.updateRow;
-        this.user[i] = this.updateForm.value;
+        this.users[i] = this.updateForm.value;
     }
     
     removeUser(user){

@@ -1,42 +1,42 @@
 <div class="container">
-  <div class="form-group">
-  <div class="col-xs-1 language">
-    <select #langSelect (change)="translate.use(langSelect.value)" class="form-control">
-      <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>
-    </select>
+    <div class="form-group">
+        <div class="col-xs-1 language">
+            <select #langSelect (change)="translate.use(langSelect.value)" class="form-control">
+                <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>
+            </select>
+        </div>
     </div>
-  </div>
-<h2>{{ 'HOME.Header1' | translate }}!</h2>
-<h3>{{ 'HOME.Header2' | translate }}:</h3>            
-<table class="table">
-    <thead>
-    <tr>
-        <th>{{ 'Table.Column1' | translate }}</th>
-        <th>{{ 'Table.Column2' | translate }}</th>
-        <th>{{ 'Table.Column3' | translate }}</th>
-        <th>{{ 'Table.Column4' | translate }}</th>
-        <th>
-            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#create">
-                <i class="glyphicon glyphicon-plus-sign"></i>
-            </button>
-        </th>
-    </tr>
-    </thead>
-    <tbody *ngFor="let user of users; let i=index">
-    <tr>
-        <td>{{user.firstName}}</td>
-        <td>{{user.lastName}}</td>
-        <td>{{user.phoneNum}}</td>
-        <td>{{user.comment}}</td>
-        <td>
-            <div class="btn-group">
-                <button href="#" class="btn btn-warning" data-toggle="modal" data-target="#edit" (click)="editUser(i)"><i class="glyphicon glyphicon-edit"></i></button>
-                <button type="button" class="btn btn-danger" (click)="removeUser(user)"><i class="glyphicon glyphicon-remove-sign"></i></button>
-            </div>
-        </td>
-    </tr>
-    </tbody>
-</table>
+    <h2>{{ 'HOME.Header1' | translate }}!</h2>
+    <h3>{{ 'HOME.Header2' | translate }}:</h3>            
+    <table class="table">
+        <thead>
+        <tr>
+            <th>{{ 'Table.Column1' | translate }}</th>
+            <th>{{ 'Table.Column2' | translate }}</th>
+            <th>{{ 'Table.Column3' | translate }}</th>
+            <th>{{ 'Table.Column4' | translate }}</th>
+            <th>
+                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#create">
+                    <i class="glyphicon glyphicon-plus-sign"></i>
+                </button>
+            </th>
+        </tr>
+        </thead>
+        <tbody *ngFor="let user of users; let i=index">
+        <tr>
+            <td>{{user.firstName}}</td>
+            <td>{{user.lastName}}</td>
+            <td>{{user.phoneNum}}</td>
+            <td>{{user.comment}}</td>
+            <td>
+                <div class="btn-group">
+                    <button href="#" class="btn btn-warning" data-toggle="modal" data-target="#edit" (click)="editUser(i)"><i class="glyphicon glyphicon-edit"></i></button>
+                    <button type="button" class="btn btn-danger" (click)="removeUser(user)"><i class="glyphicon glyphicon-remove-sign"></i></button>
+                </div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
 </div>
 <div class="container">
 <div class="modal fade" id="create" role="dialog">
